@@ -620,7 +620,7 @@
 			// Check with backend if timesheet exists
 			let timesheetExists = false;
 			try {
-			    let existsResponse = await fetch(`http://localhost:8080/timesheet/exists?date=${formattedDate}`, {
+			    let existsResponse = await fetch(`https://employeemanagementsysytem-ems-production.up.railway.app/timesheet/exists?date=${formattedDate}`, {
 			        method: "GET",
 			        credentials: "include"
 			    });
@@ -648,7 +648,7 @@
 		        return;
 		    }
 
-			let url = "http://localhost:8080/timesheet/saveOrUpdate";
+			let url = "https://employeemanagementsysytem-ems-production.up.railway.app/timesheet/saveOrUpdate";
 			let method = "POST";
 
 		    try {
