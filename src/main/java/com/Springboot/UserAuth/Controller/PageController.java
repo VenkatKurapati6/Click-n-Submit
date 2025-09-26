@@ -14,13 +14,13 @@ public class PageController {
         return Map.of("message", message);
     }
 
-    @GetMapping(value = "/home", produces = MediaType.TEXT_HTML_VALUE)
+    @GetMapping(value = "/", produces = MediaType.TEXT_HTML_VALUE)
     public String homePageHtml(Model model) {
         System.out.println("Accessed home page (HTML).");
         return "index";
     }
 
-    @GetMapping(value = "/home", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public Map<String, String> homePageJson() {
         System.out.println("Accessed home page (JSON).");
